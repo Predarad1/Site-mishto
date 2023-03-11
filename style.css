@@ -16,7 +16,18 @@ h1{
 }
 table{
     border: 3px solid black;
+    border-collapse:collapse;
+    width:100%;
+    font-family: cursive;
 }
 td{
     border: 3px solid black;
+}
+tr:nth-child(even)
+{
+    background-color: crimson;
+}
+tr:nth-child(odd)
+{
+    background-color: aquamarine;
 }
