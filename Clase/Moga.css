@@ -1,0 +1,56 @@
+    table{
+    border:3px solid black;
+    border-collapse:collapse;
+    width:70%;
+    height:50%;
+    }
+    ol{
+    font-size: 50px;
+    width: fit-content;
+    background-color:antiquewhite;
+    list-style-type:upper-roman;
+    padding-left: 10%;
+    }
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    td, th, tr{
+        border: 3px solid black;
+    }
+    li{
+        float:left;
+    }
+    ul{
+        list-style-type:none; 
+        margin:0;
+        padding-left: 40%;
+        overflow: hidden;
+        background-color:cadetblue;
+    }
+    li a{
+        display: block;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+    }
+    li a:hover{
+        background-color:aqua
+    }
+    p{
+        text-align: center;
+    }
+    .primul{
+        color:aqua
+    }
+    .doilea{
+        color:aquamarine
+    }
+    .treilea{
+        color: coral;
+    }
+    .patrulea{
+        color: brown;
+    }
