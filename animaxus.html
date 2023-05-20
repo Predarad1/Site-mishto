@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wyywyy... Le Fishe Au Lava</title>
+    </head>
+    <body>
+        <h1 id="demo1">Halo! Ich bin Radu!</h1>
+        
+        <script>
+        let nr1;
+        let nr2;
+        let operator='';
+        let rezultat;
+
+        nr1 = parseFloat( prompt("introdu primul numar:"));
+        nr2 = parseFloat( prompt("introdu al doilea numar:"));
+        operator = prompt("Alege operatia dorita:");
+
+        if(operator == '+')
+        {
+            rezultat = nr1+nr2;
+        }
+        else if(operator == '-')
+        {
+            rezultat = nr1-nr2;
+        }
+        else if(operator == '*')
+        {
+            rezultat = nr1*nr2;
+        }
+        else
+        {
+            rezultat = nr1/nr2;
+        }
+
+        </script>
+
+        <p id="rezultat">Apasa mai jos pentru a afisha rezultatul.</p>
+
+        <button type="button" onclick="document.getElementById('rezultat').innerHTML=rezultat">Apasa aici</button>
+
+    </body>
+</html>
