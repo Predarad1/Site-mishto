@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>
+      RokPeyperSizers
+    </title>
+  </head>
+
+  <body>
+    
+    <table>
+      <tr>
+        <td>
+        <h1>
+            Primul jucator alege:
+          </h1>
+        </td>
+        <td>
+          <h1>
+            Al doilea jucator alege:
+          </h1>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <h2 id="prim_jucator">
+            
+          </h2>
+        </td>
+        <td>
+          <h2 id="doi_jucator">
+            
+          </h2>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="alegere_1='piatra'">Piatra</button>
+          <button type="button" onclick="alegere_1='hartie'">Hartie</button>
+          <button type="button" onclick="alegere_1='foarfeca'">Foarfeca</button>
+        </td>
+        <td>
+          <button type="button" onclick="alegere_2='piatra'">Piatra</button>
+          <button type="button" onclick="alegere_2='hartie'">Hartie</button>
+          <button type="button" onclick="alegere_2='foarfeca'">Foarfeca</button>
+        </td>
+      </tr>
+  </table>
+
+  <script>
+    let alegere_1='';
+    let alegere_2='';
+
+    //alegere_1 = prompt("Jucatorul 1 alege:");
+    //alegere_2 = prompt("Jucatorul 2 alege:");
+
+    //verificare();
+    
+    function verificare()
+    {
+      if(alegere_1 == alegere_2)
+      {
+        window.alert("Hopa 😳... EGALI-TATE");
+      }
+     else if(alegere_1 == 'piatra' && alegere_2 == 'foarfeca')
+      {
+        window.alert("A castigat jucatorul 1 !");
+      }
+     else if(alegere_1 == 'foarfeca' && alegere_2 == 'hartie')
+      {
+        window.alert("A castigat jucatorul 1 !");
+      }
+     else if(alegere_1 == 'hartie' && alegere_2 == 'piatra')
+      {
+        window.alert("A castigat jucatorul 1 !");
+      }
+      else
+      {
+        window.alert("A castigat jucatorul 2 !");
+        //cocus maximus abominatogus
+      }
+    }
+
+   
+  </script>
+
+  <br>
+
+  <button type="button" onclick="verificare()">Verificare</button>
+
+  </body>
+
+</html>
