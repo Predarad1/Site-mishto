@@ -1,0 +1,30 @@
+.ContainerNavigatie{
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background:rgb(6, 6, 6) ;
+    box-shadow: 0 10px 20px rgb(12, 66, 0);
+    text-decoration: none;
+}
+.ContainerNavigatie .Menu{
+    display: flex;
+    position: relative;
+    
+}
+.ContainerNavigatie .Menu li {
+    font-size: 30px;
+    flex: 1;
+    list-style: none;
+    
+}
+body{
+    background-color: black;
+}
+.ContainerNavigatie .Menu li a{
+    text-decoration: none;
+    color: chartreuse;
+}
+.ContainerNavigatie .Menu li a:hover{
+   color: black; 
+   background-color: chartreuse;
+}
