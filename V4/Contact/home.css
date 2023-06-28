@@ -1,0 +1,82 @@
+.ContainerNavigatie{
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background:rgb(6, 6, 6) ;
+    box-shadow: 0 10px 20px rgb(12, 66, 0);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.ContainerNavigatie .Menu{
+    display: flex;
+    position: relative;
+    
+}
+.ContainerNavigatie .Menu li {
+    font-size: 30px;
+    flex: 1;
+    list-style: none;
+    
+}
+.body{
+    background-color: black;
+}
+.ContainerNavigatie .Menu li a{
+    text-decoration: none;
+    color: chartreuse;
+    transition: color 0.3 ease;
+}
+.ContainerNavigatie .Menu li a:hover{
+   background-color: black;
+}
+.ContainerNavigatie .Menu li:first-child a{
+    color:rgb(23, 116, 2);
+}
+.ContainerNavigatie .Menu .Line{
+    position: absolute;
+    height: 5px; 
+    width: 33%;
+    background:rgb(6, 6, 6);
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+.ContainerNavigatie .Menu li:nth-child(1):hover ~ .Line{
+    left:0%;
+    background: chartreuse ;
+}
+.ContainerNavigatie .Menu li:nth-child(2):hover ~ .Line{
+    left:33%;
+    background: chartreuse ;
+}
+.ContainerNavigatie .Menu li:nth-child(3):hover ~ .Line{
+    left:66%;
+    background: chartreuse ;
+}
+.jumbotron{
+    height: 700px;
+    background:
+    linear-gradient(rgb(0, 0, 0, 0.200),
+    rgb(128, 255, 0, 0.135)),
+    url("https://source.unsplash.com/random/1920×1080/?gpu");
+    background-size: cover;
+    text-align: center;
+}
+.jumbotron h1{
+    color: chartreuse;
+    /* background: linear-gradient(chartreuse, black); */
+}
+@-webkit-keyframes color-logo1{
+    0%, 100% { -webkit-filter: invert(20%) sepia(70%) saturate(3300%) hue-rotate(140deg) brightness(130%) contrast(100%);}
+    50% { -webkit-filter: invert(100%) sepia(10%) saturate(500%) hue-rotate(160deg) brightness(100%) contrast(100%);}
+
+}
+.jumbotron .logo1{
+    width: 100px;
+    height: 100px;
+    -webkit-animation: color-logo1 3s infinite;
+}
+.continut-text{
+    /* margin: 5% 10% 5% 10%; */
+    background-color: black;
+}
