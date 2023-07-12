@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+
+        <h1 id="id_rez">Uitete mai jos</h1>
+
+        <script>
+        let nr1 = parseInt(prompt("Introdu primul numar: "));
+        let nr2 = parseInt(prompt("Introdu al doilea numar: "));
+        let op = prompt("Alege operatia doritos: ");
+
+        let rezultat;
+        function calculare(){
+            if (op=='+')
+            {
+                rezultat = nr1+nr2;
+
+            }
+            else if (op=='-')
+            {
+                rezultat = nr1-nr2;
+
+            }
+            else if (op=='*')
+            {
+                rezultat = nr1*nr2;
+
+            }
+            else (op=='/')
+            {
+                rezultat = nr1/nr2;
+
+            }
+            document.getElementById('id_rez').
+            innerHTML="Rezultatul este " + rezultat;
+        }
+        
+    </script>
+
+        <button type="button" onclick=calculare()>Arata rezultat</button>
+
+    </body>
+
+</html>
