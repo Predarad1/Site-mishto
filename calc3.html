@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Calculator de buget...
+        </title>
+    </head>
+    <body>
+
+        <!-- <h1 id="id_rez">Uitete mai jos</h1>
+
+        <script>
+        let nr1 = parseInt(prompt("Introdu primul numar: "));
+        let nr2 = parseInt(prompt("Introdu al doilea numar: "));
+        
+        let op = prompt("Alege operatia doritos: ");
+
+        let rezultat;
+        function calculare(){
+            if (op=='+')
+            {
+                rezultat = nr1+nr2;
+            }
+            else if (op=='-')
+            {
+                rezultat = nr1-nr2;
+            }
+            else if (op=='*')
+            {
+                rezultat = nr1*nr2;
+            }
+            else (op=='/')
+            {
+                rezultat = nr1/nr2;
+            }
+            document.getElementById('id_rez').
+            innerHTML="Rezultatul este " + rezultat;
+        }
+        
+    </script>
+
+        <button type="button" onclick=calculare()>Arata rezultat</button> -->
+        <h1>Primul nr: <p id="nr1"></p> </h1>
+        <h1>Operatia Doritos: <p id="op"></p></h1>
+        <h1>Al doilea nr: <p id="nr2"></p></h1>
+        <h1>REZULTAT: <p id="rez"></p></h1>
+
+    <table>
+        <tr>
+            <td>
+                <button type="button" onclick=tasta_7()>
+                    7
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_8()>
+                    8
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_9()>
+                    9
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_reset()>
+                    <a href="calc3.html">CA</a>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick=tasta_4()>
+                    4
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_5()>
+                    5
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_6()>
+                    6
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_inmultire()>
+                    *
+                </button>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <button type="button" onclick=tasta_1()>
+                    1
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_2()>
+                    2
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_3()>
+                    3
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_impartire()>
+                    /
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick=tasta_0()>
+                   0 
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_egal()>
+                    =
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_plus()>
+                    +
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick=tasta_minus()>
+                    -
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        let operator_apasat = 0;
+        let operator = ' ';
+
+        let numarul1=0;
+        let numarul2=0;
+
+        let rezultat=0;
+        let nr_crt;
+        let second_num = false;
+
+        function tasta_egal()
+        {
+            calculare();
+            document.getElementById('rez').innerHTML=rezultat;
+        }
+        function verificare_apasare_operator()
+        {
+            if(operator_apasat==2)
+            {
+                calculare();
+                numarul1 = rezultat;
+                numarul2 = 0;
+                operator = " ";
+                document.getElementById("nr1").innerHTML=numarul1;
+                document.getElementById("op").innerHTML=operator;
+                document.getElementById("nr2").innerHTML=" ";
+                operator_apasat=1;
+            }
+        }
+
+        function calculare()
+        {
+            if(operator=='+')
+            {
+                rezultat = numarul1+numarul2;
+            }
+            else if (operator=='-')
+            {
+                rezultat=numarul1-numarul2;
+            }
+            else if(operator=='/')
+            {
+                rezultat=numarul1/numarul2;
+            }
+            else rezultat = numarul1*numarul2;
+        }
+        function tasta_minus()
+        {
+            second_num = true;
+            
+            operator_apasat = operator_apasat+1;
+            verificare_apasare_operator();operator = "-";
+            document.getElementById('op').innerHTML=operator;
+        }
+        function tasta_plus()
+        {
+            second_num = true;
+            
+            operator_apasat = operator_apasat+1;
+            verificare_apasare_operator();operator = "+";
+            document.getElementById('op').innerHTML=operator;
+        }
+        function tasta_impartire()
+        {
+            second_num = true;
+            
+            operator_apasat = operator_apasat+1;
+            verificare_apasare_operator();operator = "/";
+            document.getElementById('op').innerHTML=operator;
+        }
+        function tasta_inmultire()
+        {
+            second_num = true;
+            
+            operator_apasat = operator_apasat+1;
+            verificare_apasare_operator();operator = "*";
+            document.getElementById('op').innerHTML=operator;
+        }
+        function tasta_1()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 1;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 1;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_2()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 2;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 2;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+            
+        }
+        function tasta_3()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 3;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 3;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_4()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 4;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 4;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_5()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 5;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 5;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_6()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 6;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 6;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_7()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 7;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 7;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_8()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 8;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 8;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_9()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 9;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 9;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+        function tasta_0()
+        {
+            if(second_num==false)
+            {
+                nr_crt = 0;
+                numarul1 = numarul1*10+nr_crt;
+                document.getElementById('nr1').innerHTML=numarul1;
+            }
+            else{
+                nr_crt = 0;
+                numarul2 = numarul2*10+nr_crt;
+                document.getElementById('nr2').innerHTML=numarul2;
+            }
+        }
+
+    </script>
+
+
+
+
+    </body>
+
+</html>
